@@ -33,5 +33,4 @@ public class OperadoresAritmeticos {
 
         //Fechando o Scanner
 
-        scanner.close();
     }}
