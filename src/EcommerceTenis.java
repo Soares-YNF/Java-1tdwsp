@@ -3,15 +3,16 @@ import java.util.Scanner;
 
 public class EcommerceTenis {
     public static void main(String[] args) {
+        Scanner leitura = new Scanner(System.in);
 
         //Inicializando o objeto Tenis
 
         Tenis tenis = new Tenis();
+       tenis.fornecedor = new Fornecedor();
+       tenis.marca = new Marca();
 
         //inicializando o input
         //fazendo o Scanner Para leitura de dados
-
-        Scanner leitura = new Scanner(System.in);
 
         System.out.println("Digite o Tamanho do Tenis desejado");
         tenis.tamanho = leitura.nextInt();
@@ -34,12 +35,22 @@ public class EcommerceTenis {
         System.out.println("Tamanho: "+ tenis.tamanho);
         System.out.println("Disponabilidade: " +tenis.disponivel);
 
+        //Adicionando o Fornecedor No Ecommerce Tenis
 
+        System.out.println("Nome do Fornecedor:Nike");
+        tenis.fornecedor.Nome=leitura.nextLine();
 
+        System.out.println("Cnpj Do Fornecedor:00000 ");
+        tenis.fornecedor.Cnpj = leitura.nextLine();
 
+        System.out.println("Contato do fornecedor:11957730242 ");
+        tenis.fornecedor.Contato = leitura.nextLine();
 
+        //adicionando a Marca no Ecommerce Tenis
 
+     System.out.println("Nome do Marca: ");
+     tenis.marca.Nome = leitura.nextLine();
 
-
-
+     System.out.println("Logo da marca: ");
+     tenis.marca.Logo = leitura.nextLine();
     }}
