@@ -8,8 +8,8 @@ public class EcommerceTenis {
         //Inicializando o objeto Tenis
 
         Tenis tenis = new Tenis();
-       tenis.fornecedor = new Fornecedor();
        tenis.marca = new Marca();
+       tenis.fornecedor = new Fornecedor();
 
         //inicializando o input
         //fazendo o Scanner Para leitura de dados
@@ -37,6 +37,7 @@ public class EcommerceTenis {
 
         //Adicionando o Fornecedor No Ecommerce Tenis
 
+
         System.out.println("Nome do Fornecedor:Nike");
         tenis.fornecedor.Nome=leitura.nextLine();
 
@@ -48,9 +49,15 @@ public class EcommerceTenis {
 
         //adicionando a Marca no Ecommerce Tenis
 
-     System.out.println("Nome do Marca: ");
+     System.out.println("Nome do Marca: " + tenis.marca.Nome);
      tenis.marca.Nome = leitura.nextLine();
 
-     System.out.println("Logo da marca: ");
+     System.out.println("Logo da marca: " + tenis.marca.Logo);
      tenis.marca.Logo = leitura.nextLine();
+
+       //adicionando metodo para aumentar o preço
+
+      tenis.aumentarPreco(10);
+
+     System.out.println("Valor atualizado: " + tenis.preco);
     }}
